@@ -1,0 +1,35 @@
+{{>header}}
+
+<table class="table table-bordered" width="100%">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Mobile</th>
+      {{!-- <th scope="col">Password</th> --}}
+  <th scope="col">Tokens</th>
+  <th></th>
+  <th></th>
+    </tr>
+  </thead>
+  <tbody>
+     
+    {{#each users}}
+        <tr>
+        <th scope="row">{{ID}} </th>
+        <td>{{ FIRSTNAME }}</td>
+        <td>{{ LASTNAME }}</td>
+        <td>{{ AGE }}</td>
+        <td>{{ MOBILE }}</td>
+         
+       <td><a href="edit/{{ ID }}" class="text-info">Upt</a> </td>
+       <td><a href="delete/{{ ID }}" class="text-danger">Del</a> </td>
+
+        </tr>
+            
+    {{/each}}
+
+
+  </tbody>
+</table>{{>footer}}

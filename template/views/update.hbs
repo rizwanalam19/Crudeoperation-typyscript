@@ -1,0 +1,50 @@
+{{>header}}
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-6 ">
+    <br><br><br><br>
+     {{#each users}}
+
+    <div class="card p-3">
+<form action="/update/{{ID}}" method="post">
+  <div class="row mb-4">
+    <div class="col">
+      <div class="form-outline">
+        <input type="text" id="form6Example1" class="form-control" name="firstName" value="{{FIRSTNAME}}"/>
+        <label class="form-label" for="form6Example1">First name</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-outline">
+        <input type="text" id="form6Example2" class="form-control" name="lastName" value="{{LASTNAME}}"/>
+        <label class="form-label" for="form6Example2">Last name</label>
+      </div>
+    </div>
+  </div>
+
+
+ <!-- Age input -->
+  <div class="form-outline mb-4">
+    <input type="number" id="form6Example6" class="form-control" name="Age" value="{{AGE}}"/>
+    <label class="form-label" for="form6Example6">Age</label>
+  </div>
+
+
+  <!-- Number input -->
+  <div class="form-outline mb-4">
+    <input type="number" id="form6Example6" class="form-control" name="mobile" value="{{MOBILE}}"/>
+    <label class="form-label" for="form6Example6">Phone</label>
+  </div>
+
+   
+
+  <!-- Submit button -->
+  <button type="submit" value="submit"  class="btn btn-primary btn-block mb-4">Submit</button>
+</form>
+    </div>
+ {{/each}}
+</div>
+</div>
+</div>
+
+{{>footer}}
