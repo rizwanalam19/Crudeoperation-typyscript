@@ -6,9 +6,10 @@
       <th scope="col">#</th>
       <th scope="col">Name</th>
       <th scope="col">Email</th>
-      <th scope="col">Mobile</th>
+      <th scope="col">Age</th>
       {{!-- <th scope="col">Password</th> --}}
-  <th scope="col">Tokens</th>
+  <th scope="col">Mobile</th>
+  <th scope="col">IMAGE</th>
   <th></th>
   <th></th>
     </tr>
@@ -22,14 +23,41 @@
         <td>{{ LASTNAME }}</td>
         <td>{{ AGE }}</td>
         <td>{{ MOBILE }}</td>
+        <td>
+          
+          <div id="lightgallery">
+    <a href="{{ IMAGE }}" data-lg-size="1600-2400">
+        <img alt="img1" src="{{ IMAGE }}" style="width: 100px; height: 100px;" />
+    </a>
+   
+</div>
+
+          {{!-- <img src="{{ IMAGE }}" alt="" srcset="" style="width: 100px; height: 100px;"></td> --}}
          
-       <td><a href="edit/{{ ID }}" class="text-info">Upt</a> </td>
-       <td><a href="delete/{{ ID }}" class="text-danger">Del</a> </td>
+       <td class="text-center"><a href="edit/{{ ID }}" class="btn-sm btn btn-info">Update</a> </td>
+       <td class="text-center"><a href="delete/{{ ID }}" class="btn-sm btn btn-danger">Delete</a> </td>
 
         </tr>
-            
+
     {{/each}}
+{{!-- {{{paginate pagination limit="10"}}} --}}
+{{!-- {{paginate pagination paginationClass="some class"}} --}}
 
 
+{{!-- <nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <a href="" class="page-link">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active" aria-current="page">
+      <a class="page-link" href="#">2 </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav> --}}
   </tbody>
 </table>{{>footer}}
